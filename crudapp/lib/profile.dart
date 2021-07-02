@@ -13,7 +13,7 @@ class profilepage extends StatefulWidget {
 
 class _profilepageState extends State<profilepage> {
   void initState() {
-    Future.delayed(Duration(seconds: 4), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => mainpage()));
     });
