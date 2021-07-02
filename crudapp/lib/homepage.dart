@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:crudapp/AddEditPage.dart';
 
+import 'flutter_icon_home.dart';
+
 class mainpage extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -41,6 +43,22 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Crud App'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(MyFlutterApp.home),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => mainpage()));
+              }),
+          IconButton(
+            icon: const Icon(Icons.contact_phone_outlined),
+            tooltip: 'ContactUs',
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ContactUs()));
+            },
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
